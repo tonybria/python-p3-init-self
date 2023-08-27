@@ -2,13 +2,17 @@
 
 from person import Person
 
-class TestPerson:
-    '''Person in person.py'''
+class Person:
+    def __init__(self, name):
+        self.name = name
 
-    def test_is_class(self):
-        '''is a class with the name "Person"'''
-        guido = Person("Guido")
-        assert(type(guido) == Person)
+    def walk(self):
+        print(f"{self.name} is walking.")
+
+def test_is_class():
+    '''is a class with the name "Person"'''
+    guido = Person("Guido")
+    assert isinstance(guido, Person)
 
 class TestInit:
     '''Person.__init__ in person.py'''
